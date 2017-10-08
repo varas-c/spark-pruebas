@@ -1,5 +1,13 @@
+<<<<<<< HEAD
 eclipse.preferences.version=1
 org.eclipse.jdt.core.compiler.codegen.targetPlatform=1.8
 org.eclipse.jdt.core.compiler.compliance=1.8
 org.eclipse.jdt.core.compiler.problem.forbiddenReference=warning
 org.eclipse.jdt.core.compiler.source=1.8
+=======
+#Sun Oct 08 19:51:59 ART 2017
+org.eclipse.jdt.core.compiler.codegen.targetPlatform=1.8
+eclipse.preferences.version=1
+org.eclipse.jdt.core.compiler.source=1.8
+org.eclipse.jdt.core.compiler.compliance=1.8
+>>>>>>> a1d0d44c90d636e0a1f2f56845695a0efd5a4d8c
