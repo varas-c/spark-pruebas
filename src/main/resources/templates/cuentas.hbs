@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+		<nav class="navbar navbar-default">
+		  <div class="container-fluid">
+		    <div class="navbar-header">
+		      <a class="navbar-brand" href="#">Programa Financiero</a>
+		    </div>
+		    <ul class="nav navbar-nav">
+		      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Empresas<span class="caret"></span></a>
+		        <ul class="dropdown-menu">
+		          <li><a href="#">Ver listado</a></li>
+		          <li><a href="#">Importar nuevas</a></li>
+		        </ul>
+		      </li>
+		      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Indicadores<span class="caret"></span></a>
+		        <ul class="dropdown-menu">
+		          <li><a href="#">Crear nuevo</a></li>
+		        </ul>
+		      </li>
+		      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Metodologías<span class="caret"></span></a>
+		        <ul class="dropdown-menu">
+		          <li><a href="#">Calcular</a></li>
+		          <li><a href="#">Crear nueva</a></li>
+		          <li><a href="#">Crear Condición</a></li>
+
+		        </ul>
+		      </li>
+		    </ul>
+		  </div>
+		</nav>
+
+ 
+
+  	<div class="panel panel-default">
+
+        <div class="panel-heading">
+            <div class="row">
+	            <div class="col-sm-6"><h4 class="panel-title">Cuentas de Empresa</h4></div>
+	            <div class="col-sm-6">
+	            <select class="form-control text-right">
+	              <option>2015</option>
+	              <option>2016</option>
+	              <option>2017</option>
+	              <option>2018</option>
+	            </select>
+	            </div>
+            </div>
+        </div>
+ 		 <div class="panel-body">
+ 		 <table class="table table-hover">
+ 		   <thead>
+ 		     <tr>
+ 		       <th>Nombre</th>
+ 		       <th>Valor</th>
+ 		       <th>Periodo</th>
+ 		     </tr>
+ 		   </thead>
+ 		   <tbody>
+ 		   {{#each cuentas}}
+ 		     <tr>
+ 		       <td>{{cuenta.nombre}}</td>
+ 		       <td>{{cuenta.valor}}</td>
+ 		       <td>{{cuenta.periodo}}</td>
+ 		     </tr>
+ 		    {{/each}}
+ 		   </tbody>
+
+ 		 </table>
+ 		 </div>
+	</div>
+           
+
+
+</div>
+
+</body>
+</html>
