@@ -1,5 +1,7 @@
 package model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Account {
 	
 	private Long id;
@@ -31,6 +33,7 @@ public class Account {
 
 	private String name;
 	private double value;
+	@JsonProperty("period")
 	private String date;
 	
 	public Account(String name, String date, double value/*, Company company*/) {

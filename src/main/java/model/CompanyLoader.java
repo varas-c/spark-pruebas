@@ -13,6 +13,7 @@ public class CompanyLoader {
 	
 		List<Company> aux = null;
 		String fileContent = new FileReader().readFile(pathFile);
+		System.out.println(fileContent);
 		aux = new ParserCompany().parseCompanies(fileContent);
 		if (aux == null) {
 			throw new InvalidFileException("Contenido Vacío");			
