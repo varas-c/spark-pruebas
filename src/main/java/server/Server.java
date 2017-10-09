@@ -37,6 +37,7 @@ public class Server {
 	}
 
 	private static ModelAndView login(Request request, Response response) throws InvalidFileException, IOException {
+		
 		System.out.println("LOGEANDO");
 		HashMap<String, Object> viewModel = new HashMap<>();
 		String user = request.queryParams("user");
@@ -51,6 +52,7 @@ public class Server {
 		CompanyLoader a = new CompanyLoader();
 		List<Company> companies = a.getCompanyList("src/test/resources/cuentasHector3.json");
 		
+		System.out.println(companies.get(0).getName());
 		viewModel.put("companies", companies);
 		
 		return new ModelAndView(viewModel, "index.hbs");
