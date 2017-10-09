@@ -12,7 +12,7 @@ public class CompanyLoader {
 	public List<Company> getCompanyList(String pathFile) throws InvalidFileException, IOException {
 	
 		List<Company> aux = null;
-		String fileContent = new FileReader().readFile(pathFile);
+		String fileContent = new FileReader().readFile("/src/test/resources/cuentasHector3.json");
 		aux = new ParserCompany().parseCompanies(fileContent);
 		if (aux == null) {
 			throw new InvalidFileException("Contenido Vacío");			
