@@ -1,0 +1,138 @@
+[{
+	"name" : "Genius",
+	"openingYear" : 2009,
+  	"accounts": [{
+  		"name" : "ebitda",
+  		"period" : "2014",
+  		"value" : 100
+  	},
+  	{
+  		"name" : "ebitda",
+  		"period" : "2015",
+  		"value" : 200
+  	},
+  	{
+  		"name" : "ebitda",
+  		"period" : "2016",
+  		"value" : 300
+  	},
+    {
+  		"name" : "ebitda",
+  		"period" : "2017",
+  		"value" : 400
+  	}
+  	]
+},
+{
+	"name" : "Motorola",
+	"openingYear" : 2006,
+  	"accounts": [{
+  		"name" : "ebitda",
+  		"period" : "2014",
+  		"value" : 500
+  	},
+  	
+  	{
+  		"name" : "ebitda",
+  		"period" : "2015",
+  		"value" : 700
+  	},
+  	
+  	{
+  		"name" : "ebitda",
+  		"period" : "2016",
+  		"value" : 100
+  	},
+  	
+    {
+  		"name" : "ebitda",
+  		"period" : "2017",
+  		"value" : 1000
+  	}
+  	]
+},
+{
+	"name" : "Facebook",
+	"openingYear" : 2010,
+  	"accounts": [{
+  		"name" : "ebitda",
+  		"period" : "2014",
+  		"value" : 1000
+  	},
+  	
+  	{
+  		"name" : "ebitda",
+  		"period" : "2015",
+  		"value" : 800
+  	},
+  	
+  	{
+  		"name" : "ebitda",
+  		"period" : "2016",
+  		"value" : 900
+  	},
+  	
+    {
+  		"name" : "ebitda",
+  		"period" : "2017",
+  		"value" : 100
+  	}
+  	]
+},
+{
+	"name" : "Samsung",
+	"openingYear" : 2015,
+  	"accounts": [{
+  		"name" : "ebitda",
+  		"period" : "2014",
+  		"value" : 150
+  	},
+  	
+  	{
+  		"name" : "ebitda",
+  		"period" : "2015",
+  		"value" : 200
+  	},
+  	
+  	{
+  		"name" : "ebitda",
+  		"period" : "2016",
+  		"value" : 500
+  	},
+  	
+    {
+  		"name" : "ebitda",
+  		"period" : "2017",
+  		"value" : 900
+  	}
+  	]
+},
+{
+	"name" : "Twitter",
+	"openingYear" : 2008,
+  	"accounts": [{
+  		"name" : "ebitda",
+  		"period" : "2014",
+  		"value" : 500
+  	},
+  	
+  	{
+  		"name" : "ebitda",
+  		"period" : "2015",
+  		"value" : 200
+  	},
+  	
+  	{
+  		"name" : "ebitda",
+  		"period" : "2016",
+  		"value" : 600
+  	},
+  	
+    {
+  		"name" : "ebitda",
+  		"period" : "2017",
+  		"value" : 100
+  	}
+  	]
+}
+]

@@ -1,6 +1,6 @@
 package server;
 
-import java.util.ArrayList;
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
 
@@ -10,6 +10,9 @@ import spark.debug.DebugScreen;
 import spark.template.handlebars.HandlebarsTemplateEngine;
 import spark.Request;
 import spark.Response;
+import model.CompanyLoader;
+import model.InvalidFileException;
+import model.Company;
 
 public class Server {
 	public static void main(String[] args) {
@@ -23,29 +26,17 @@ public class Server {
 		Spark.stop();
 	}
 	
-	private static ModelAndView tabla(Request request, Response response) {
+	private static ModelAndView tabla(Request request, Response response) throws InvalidFileException, IOException {
 		HashMap<String,Object> viewModel = new HashMap<>();
-		Cuenta a = new Cuenta();
-		a.setNombre("Facebook");
-		a.setPeriodo("2015");
-		a.setValor("2015");
+		CompanyLoader a = new CompanyLoader();
+		List<Company> companies = a.getCompanyList("/home/chris/Documents/DisenoSistemas/2017-jm-group-02/src/test/resources/cuentasHector3.json");
 		
-		Cuenta b = new Cuenta();
-		b.setNombre("blablabla");
-		b.setPeriodo("2015");
-		b.setValor("99191919");
-		
-		List<Cuenta> list = new ArrayList<Cuenta>();
-		list.add(a);
-		list.add(b);
-		
-		viewModel.put("cuentas", list);
-		
+		viewModel.put("companies", companies);
 		
 		return new ModelAndView(viewModel, "cuentas.hbs");
 	}
 
-	private static ModelAndView login(Request request, Response response) {
+	private static ModelAndView login(Request request, Response response) throws InvalidFileException, IOException {
 		System.out.println("LOGEANDO");
 		HashMap<String, Object> viewModel = new HashMap<>();
 		String user = request.queryParams("user");
@@ -56,6 +47,11 @@ public class Server {
 			System.out.println("OK!");
 			return new ModelAndView(viewModel, "badLogin.hbs"); 
 		}
+		
+		CompanyLoader a = new CompanyLoader();
+		List<Company> companies = a.getCompanyList("src/test/resources/cuentasHector3.json");
+		
+		viewModel.put("companies", companies);
 		
 		return new ModelAndView(viewModel, "index.hbs");
 		
